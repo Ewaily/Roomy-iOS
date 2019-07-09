@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,14 +15,76 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Roomy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="shR-Qn-u6t">
+                                <rect key="frame" x="0.0" y="343" width="375" height="469"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder copy" translatesAutoresizingMaskIntoConstraints="NO" id="e8L-xE-IFK">
+                                <rect key="frame" x="150" y="80" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="6Dx-2U-7hN"/>
+                                    <constraint firstAttribute="width" constant="75" id="ejV-GE-n25"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6TG-Pe-9Gh">
+                                <rect key="frame" x="158.66666666666666" y="757" width="58" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="hWl-vo-dRS"/>
+                                    <constraint firstAttribute="width" constant="58" id="pJc-yh-KjA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" red="0.94901960784313721" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R o o m y" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjc-1C-V4J">
+                                <rect key="frame" x="126" y="202" width="123" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="123" id="cl1-gV-D5R"/>
+                                    <constraint firstAttribute="height" constant="43" id="qdw-7F-yFx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" red="0.99607843137254903" green="0.47058823529411764" blue="0.396078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find your roomate today" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mzO-vk-EXR">
+                                <rect key="frame" x="90" y="276" width="195" height="42.333333333333314"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mzO-vk-EXR" secondAttribute="height" multiplier="216:47" id="Squ-7d-gAg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" red="0.70588235294117641" green="0.70588235294117641" blue="0.70588235294117641" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="e8L-xE-IFK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="36" id="4bN-Xd-ssB"/>
+                            <constraint firstItem="xjc-1C-V4J" firstAttribute="top" secondItem="e8L-xE-IFK" secondAttribute="bottom" constant="47" id="DcX-A7-tq4"/>
+                            <constraint firstItem="xjc-1C-V4J" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dz1-Tn-v64"/>
+                            <constraint firstItem="mzO-vk-EXR" firstAttribute="top" secondItem="xjc-1C-V4J" secondAttribute="bottom" constant="31" id="H3C-Mn-zdg"/>
+                            <constraint firstAttribute="bottom" secondItem="shR-Qn-u6t" secondAttribute="bottom" id="JRA-Ox-z72"/>
+                            <constraint firstItem="shR-Qn-u6t" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Mob-oM-Nay"/>
+                            <constraint firstAttribute="bottom" secondItem="6TG-Pe-9Gh" secondAttribute="bottom" constant="27" id="W0J-Ki-7h1"/>
+                            <constraint firstItem="6TG-Pe-9Gh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ahd-dM-Cor"/>
+                            <constraint firstItem="shR-Qn-u6t" firstAttribute="top" secondItem="mzO-vk-EXR" secondAttribute="bottom" constant="24.670000000000002" id="eCu-5D-r5G"/>
+                            <constraint firstAttribute="trailing" secondItem="shR-Qn-u6t" secondAttribute="trailing" id="gFh-G7-Tc0"/>
+                            <constraint firstItem="mzO-vk-EXR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mza-Zm-hde"/>
+                            <constraint firstItem="e8L-xE-IFK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="t1R-aV-Eys"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="95.320197044334975"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Rectangle" width="375" height="469"/>
+        <image name="placeholder copy" width="63" height="75"/>
+    </resources>
 </document>
