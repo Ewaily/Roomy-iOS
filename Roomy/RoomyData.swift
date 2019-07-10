@@ -19,8 +19,9 @@ class RoomyData {
     var firstPic: UIImage
     var secondPic: UIImage
     var thirdPic: UIImage
-    
-    init(address: String, city: String, price: String, bed: Int, bath: Int, firstPic: UIImage, secondPic: UIImage, thirdPic: UIImage) {
+    var descriptionText: String
+    var descriptionPic: UIImage
+    init(address: String, city: String, price: String, bed: Int, bath: Int, firstPic: UIImage, secondPic: UIImage, thirdPic: UIImage, descriptionText: String, descriptionPic: UIImage) {
         
         self.address = address
         self.city = city
@@ -30,5 +31,7 @@ class RoomyData {
         self.firstPic = firstPic
         self.secondPic = secondPic
         self.thirdPic = thirdPic
+        self.descriptionText = descriptionText
+        self.descriptionPic = descriptionPic
     }
 }
