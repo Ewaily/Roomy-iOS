@@ -12,6 +12,8 @@
 		105EE6C022D4A026009796D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 105EE6BE22D4A026009796D8 /* Main.storyboard */; };
 		105EE6C222D4A027009796D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 105EE6C122D4A027009796D8 /* Assets.xcassets */; };
 		105EE6C522D4A027009796D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 105EE6C322D4A027009796D8 /* LaunchScreen.storyboard */; };
+		1097123222D576AB001153E2 /* RoomyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1097123022D576AB001153E2 /* RoomyCell.swift */; };
+		1097123322D576AB001153E2 /* RoomyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1097123122D576AB001153E2 /* RoomyCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		105EE6C122D4A027009796D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		105EE6C422D4A027009796D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		105EE6C622D4A027009796D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1097123022D576AB001153E2 /* RoomyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomyCell.swift; sourceTree = "<group>"; };
+		1097123122D576AB001153E2 /* RoomyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomyCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				105EE6C122D4A027009796D8 /* Assets.xcassets */,
 				105EE6C322D4A027009796D8 /* LaunchScreen.storyboard */,
 				105EE6C622D4A027009796D8 /* Info.plist */,
+				1097123022D576AB001153E2 /* RoomyCell.swift */,
+				1097123122D576AB001153E2 /* RoomyCell.xib */,
 			);
 			path = Roomy;
 			sourceTree = "<group>";
@@ -122,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1097123322D576AB001153E2 /* RoomyCell.xib in Resources */,
 				105EE6C522D4A027009796D8 /* LaunchScreen.storyboard in Resources */,
 				105EE6C222D4A027009796D8 /* Assets.xcassets in Resources */,
 				105EE6C022D4A026009796D8 /* Main.storyboard in Resources */,
@@ -137,6 +144,7 @@
 			files = (
 				105EE6BD22D4A026009796D8 /* ViewController.swift in Sources */,
 				105EE6BB22D4A026009796D8 /* AppDelegate.swift in Sources */,
+				1097123222D576AB001153E2 /* RoomyCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
