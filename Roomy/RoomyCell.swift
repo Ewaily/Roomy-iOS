@@ -12,11 +12,32 @@ class RoomyCell: UITableViewCell {
 
     
     @IBOutlet private weak var rommyContentView: UIView!
+    @IBOutlet private weak var addressLabel: UILabel!
+    @IBOutlet private weak var cityLabel: UILabel!
+    @IBOutlet private weak var priceLabel: UILabel!
+    @IBOutlet private weak var bedLabel: UILabel!
+    @IBOutlet private weak var bathLabel: UILabel!
+    @IBOutlet private weak var firstPic: UIImageView!
+    @IBOutlet private weak var secondPic: UIImageView!
+    @IBOutlet private weak var thirdPic: UIImageView!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
-
+    
+    
+    func configureCell (roomyData: RoomyData){
+        
+        addressLabel.text = roomyData.address
+        cityLabel.text = roomyData.city
+        priceLabel.text = roomyData.price
+        bedLabel.text = String(roomyData.bed) + " bed"
+        bathLabel.text = String(roomyData.bath) + " bath"
+        firstPic.image = roomyData.firstPic
+        secondPic.image = roomyData.secondPic
+        thirdPic.image = roomyData.thirdPic
+    }
     
 }

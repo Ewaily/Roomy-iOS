@@ -70,19 +70,19 @@
                                             <constraint firstAttribute="width" secondItem="oKx-DB-hBX" secondAttribute="height" multiplier="37:46" id="wPD-gT-g4D"/>
                                         </constraints>
                                     </view>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle Copy" translatesAutoresizingMaskIntoConstraints="NO" id="Kmk-Lq-GR4">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Room 1-3" translatesAutoresizingMaskIntoConstraints="NO" id="Kmk-Lq-GR4">
                                         <rect key="frame" x="89.5" y="0.0" width="75" height="93"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Kmk-Lq-GR4" secondAttribute="height" multiplier="37:46" id="wBn-W7-Ca5"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle Copy 2" translatesAutoresizingMaskIntoConstraints="NO" id="FLh-WT-tuB">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Room 1-2" translatesAutoresizingMaskIntoConstraints="NO" id="FLh-WT-tuB">
                                         <rect key="frame" x="179.5" y="0.0" width="75" height="93"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="FLh-WT-tuB" secondAttribute="height" multiplier="37:46" id="h59-Rz-aBM"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle Copy 3" translatesAutoresizingMaskIntoConstraints="NO" id="IZK-kx-iGN">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Room 1-1" translatesAutoresizingMaskIntoConstraints="NO" id="IZK-kx-iGN">
                                         <rect key="frame" x="269" y="0.0" width="75" height="93"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="IZK-kx-iGN" secondAttribute="height" multiplier="37:46" id="nmx-OM-bDk"/>
@@ -116,14 +116,22 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="addressLabel" destination="BJF-qX-Gna" id="KEK-53-wto"/>
+                <outlet property="bathLabel" destination="Ewm-i5-bOQ" id="Dhq-Eh-XSL"/>
+                <outlet property="bedLabel" destination="Vhn-ai-Owt" id="rgg-7S-Cdq"/>
+                <outlet property="cityLabel" destination="F8w-6s-pYo" id="fvf-N7-qzY"/>
+                <outlet property="firstPic" destination="IZK-kx-iGN" id="W4D-Zz-eGQ"/>
+                <outlet property="priceLabel" destination="gYQ-f4-cY9" id="uJr-u5-xoT"/>
                 <outlet property="rommyContentView" destination="H2p-sc-9uM" id="JaM-Rg-YKd"/>
+                <outlet property="secondPic" destination="FLh-WT-tuB" id="ztF-Ob-DoQ"/>
+                <outlet property="thirdPic" destination="Kmk-Lq-GR4" id="GS6-o0-ffy"/>
             </connections>
             <point key="canvasLocation" x="127.53623188405798" y="131.25"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="Rectangle Copy" width="74" height="92"/>
-        <image name="Rectangle Copy 2" width="74" height="92"/>
-        <image name="Rectangle Copy 3" width="74" height="92"/>
+        <image name="Room 1-1" width="74" height="92"/>
+        <image name="Room 1-2" width="74" height="92"/>
+        <image name="Room 1-3" width="74" height="92"/>
     </resources>
 </document>

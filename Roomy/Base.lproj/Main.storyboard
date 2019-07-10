@@ -18,10 +18,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="shR-Qn-u6t">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Landing" translatesAutoresizingMaskIntoConstraints="NO" id="shR-Qn-u6t">
                                 <rect key="frame" x="0.0" y="343" width="375" height="469"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder copy" translatesAutoresizingMaskIntoConstraints="NO" id="e8L-xE-IFK">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="e8L-xE-IFK">
                                 <rect key="frame" x="150" y="80" width="75" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="6Dx-2U-7hN"/>
@@ -93,7 +93,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder copy" translatesAutoresizingMaskIntoConstraints="NO" id="u5y-Pg-1un">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="u5y-Pg-1un">
                                 <rect key="frame" x="150" y="77" width="75" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="ILo-mg-bru"/>
@@ -180,7 +180,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g2s-rQ-li1">
                                 <rect key="frame" x="39.666666666666657" y="464" width="296" height="54"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
-                                <state key="normal" title="Sign In" backgroundImage="Rectangle-1">
+                                <state key="normal" title="Sign In" backgroundImage="Button">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -198,19 +198,19 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igg-3a-yW3" userLabel="Google">
                                         <rect key="frame" x="0.0" y="0.0" width="73" height="70"/>
-                                        <state key="normal" image="001-search" backgroundImage="Oval"/>
+                                        <state key="normal" image="Google" backgroundImage="Oval"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XFz-3b-k4g" userLabel="Facebook">
                                         <rect key="frame" x="85.333333333333329" y="0.0" width="72.999999999999986" height="70"/>
-                                        <state key="normal" image="004-facebook" backgroundImage="Oval"/>
+                                        <state key="normal" image="Facebook" backgroundImage="Oval"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a2Y-L7-y4L" userLabel="Twitter">
                                         <rect key="frame" x="170.66666666666666" y="0.0" width="73" height="70"/>
-                                        <state key="normal" image="002-twitter" backgroundImage="Oval"/>
+                                        <state key="normal" image="Twitter" backgroundImage="Oval"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1t1-cI-tWe" userLabel="LinkedIn">
                                         <rect key="frame" x="256" y="0.0" width="73" height="70"/>
-                                        <state key="normal" image="003-linkedin" backgroundImage="Oval"/>
+                                        <state key="normal" image="LinkedIn" backgroundImage="Oval"/>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -350,15 +350,15 @@
         </scene>
     </scenes>
     <resources>
-        <image name="001-search" width="28" height="28"/>
-        <image name="002-twitter" width="28" height="24"/>
-        <image name="003-linkedin" width="28" height="28"/>
-        <image name="004-facebook" width="28" height="28"/>
+        <image name="Button" width="296" height="54"/>
+        <image name="Facebook" width="28" height="28"/>
+        <image name="Google" width="28" height="28"/>
+        <image name="Landing" width="375" height="469"/>
         <image name="Line" width="336" height="1"/>
+        <image name="LinkedIn" width="28" height="28"/>
+        <image name="Logo" width="63" height="75"/>
         <image name="Oval" width="73" height="73"/>
-        <image name="Rectangle" width="375" height="469"/>
-        <image name="Rectangle-1" width="296" height="54"/>
-        <image name="placeholder copy" width="63" height="75"/>
+        <image name="Twitter" width="28" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="HUH-1q-gZi"/>
