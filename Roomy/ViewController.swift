@@ -55,10 +55,12 @@ extension ViewController: UITableViewDataSource{
         let room = Rooms[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "roomyCell") as! RoomyCell
         cell.configureCell(roomyData: room)
+        cell.selectionStyle = .none
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 177.5
+        return 180.5
     }
-}
+    
+    }
