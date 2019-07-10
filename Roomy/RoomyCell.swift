@@ -10,18 +10,13 @@ import UIKit
 
 class RoomyCell: UITableViewCell {
 
-    @IBOutlet private weak var firstLabel: UILabel!
     
-    @IBOutlet private weak var secondLabel: UILabel!
     @IBOutlet private weak var rommyContentView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    func confCell (a: String, b: String){
-        firstLabel.text = a
-        secondLabel.text = b
-    }
+
     
 }
