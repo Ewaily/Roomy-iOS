@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		100A931422D69AAB007E2E3F /* RoomyDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100A931322D69AAB007E2E3F /* RoomyDescription.swift */; };
+		10107DFB22D6C43B00F6A6C8 /* SiginIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10107DFA22D6C43B00F6A6C8 /* SiginIn.swift */; };
 		105EE6BB22D4A026009796D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105EE6BA22D4A026009796D8 /* AppDelegate.swift */; };
 		105EE6BD22D4A026009796D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105EE6BC22D4A026009796D8 /* ViewController.swift */; };
 		105EE6C022D4A026009796D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 105EE6BE22D4A026009796D8 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		100A931322D69AAB007E2E3F /* RoomyDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomyDescription.swift; sourceTree = SOURCE_ROOT; };
+		10107DFA22D6C43B00F6A6C8 /* SiginIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiginIn.swift; sourceTree = "<group>"; };
 		105EE6B722D4A026009796D8 /* Roomy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roomy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		105EE6BA22D4A026009796D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		105EE6BC22D4A026009796D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				1097123022D576AB001153E2 /* RoomyCell.swift */,
 				1097123122D576AB001153E2 /* RoomyCell.xib */,
 				10EA3FAF22D653010088760A /* RoomyData.swift */,
+				10107DFA22D6C43B00F6A6C8 /* SiginIn.swift */,
 			);
 			path = Roomy;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 				10EA3FB022D653010088760A /* RoomyData.swift in Sources */,
 				1097123222D576AB001153E2 /* RoomyCell.swift in Sources */,
 				100A931422D69AAB007E2E3F /* RoomyDescription.swift in Sources */,
+				10107DFB22D6C43B00F6A6C8 /* SiginIn.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,7 +312,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ewaily.Roomy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -326,7 +330,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ewaily.Roomy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

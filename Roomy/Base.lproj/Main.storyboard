@@ -85,10 +85,10 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="95.320197044334975"/>
         </scene>
-        <!--View Controller-->
+        <!--Sigin In-->
         <scene sceneID="gcL-zm-pRB">
             <objects>
-                <viewController id="vMC-g9-dXc" sceneMemberID="viewController">
+                <viewController id="vMC-g9-dXc" customClass="SiginIn" customModule="Roomy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pv9-Fw-at5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -119,7 +119,10 @@
                                         <rect key="frame" x="0.0" y="24.333333333333314" width="339" height="16.666666666666671"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" textContentType="email"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="vMC-g9-dXc" id="QBf-tO-hOe"/>
+                                        </connections>
                                     </textField>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Line" translatesAutoresizingMaskIntoConstraints="NO" id="ri1-tc-3Hr">
                                         <rect key="frame" x="0.0" y="45" width="339" height="1"/>
@@ -152,6 +155,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="vMC-g9-dXc" id="d8G-80-tR7"/>
+                                        </connections>
                                     </textField>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Line" translatesAutoresizingMaskIntoConstraints="NO" id="x9q-X4-1Rs">
                                         <rect key="frame" x="0.0" y="46" width="339" height="1"/>
@@ -449,7 +455,6 @@
         <image name="Twitter" width="28" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aoU-vm-Zx3"/>
-        <segue reference="I4E-Qx-WEW"/>
+        <segue reference="HUH-1q-gZi"/>
     </inferredMetricsTieBreakers>
 </document>
