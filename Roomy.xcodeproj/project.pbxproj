@@ -64,17 +64,17 @@
 		105EE6B922D4A026009796D8 /* Roomy */ = {
 			isa = PBXGroup;
 			children = (
-				100A931322D69AAB007E2E3F /* RoomyDescription.swift */,
 				105EE6BA22D4A026009796D8 /* AppDelegate.swift */,
 				105EE6BC22D4A026009796D8 /* ViewController.swift */,
-				105EE6BE22D4A026009796D8 /* Main.storyboard */,
-				105EE6C122D4A027009796D8 /* Assets.xcassets */,
-				105EE6C322D4A027009796D8 /* LaunchScreen.storyboard */,
-				105EE6C622D4A027009796D8 /* Info.plist */,
-				1097123022D576AB001153E2 /* RoomyCell.swift */,
-				1097123122D576AB001153E2 /* RoomyCell.xib */,
+				100A931322D69AAB007E2E3F /* RoomyDescription.swift */,
 				10EA3FAF22D653010088760A /* RoomyData.swift */,
 				10107DFA22D6C43B00F6A6C8 /* SiginIn.swift */,
+				1097123022D576AB001153E2 /* RoomyCell.swift */,
+				105EE6C122D4A027009796D8 /* Assets.xcassets */,
+				105EE6BE22D4A026009796D8 /* Main.storyboard */,
+				105EE6C322D4A027009796D8 /* LaunchScreen.storyboard */,
+				1097123122D576AB001153E2 /* RoomyCell.xib */,
+				105EE6C622D4A027009796D8 /* Info.plist */,
 			);
 			path = Roomy;
 			sourceTree = "<group>";

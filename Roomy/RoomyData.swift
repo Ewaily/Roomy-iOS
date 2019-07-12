@@ -21,9 +21,8 @@ class RoomyData {
     var thirdPic: UIImage
     var descriptionText: String
     var descriptionPic: UIImage
+    
     init(address: String, city: String, price: Double, bed: Int, bath: Int, firstPic: UIImage, secondPic: UIImage, thirdPic: UIImage, descriptionText: String, descriptionPic: UIImage) {
-        
-        
         self.address = address
         self.city = city
         self.price = RoomyData.convertDoubleToCurrency(amount: price)
@@ -36,12 +35,10 @@ class RoomyData {
         self.descriptionPic = descriptionPic
     }
     
-     static func convertDoubleToCurrency (amount: Double) -> String {
-        
+    static func convertDoubleToCurrency (amount: Double) -> String {
         let numberFormatter = NumberFormatter ()
         numberFormatter.numberStyle = .currency
         numberFormatter.locale = Locale.current
-        
         return numberFormatter.string(from: NSNumber(value: amount))!
     }
 }
