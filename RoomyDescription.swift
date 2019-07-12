@@ -17,6 +17,9 @@ class RoomyDescription: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        self.navigationItem.setRightBarButton(UIBarButtonItem(image: #imageLiteral(resourceName: "Bookmark Button") ,style: .plain, target: self, action: #selector(bookmarkButton)), animated: true)
+        
         descriptionPic.image = desc?.descriptionPic
         descriptionLabel.text = desc?.descriptionText
     }
@@ -26,6 +29,10 @@ class RoomyDescription: UIViewController {
         
         self.descriptionPic.image = descriptionPic
         self.descriptionLabel.text = descriptionLabel
+    }
+    
+    @objc func bookmarkButton () {
+        print("Bookmarked!")
     }
 
 }

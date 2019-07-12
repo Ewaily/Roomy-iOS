@@ -18,14 +18,17 @@ class ViewController: UIViewController {
     var currentIndex = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
         let myXibFile = UINib(nibName: "RoomyCell", bundle: nil)
         roomsTableView.register(myXibFile, forCellReuseIdentifier: "roomyCell")
-        
         Rooms = createRoomyData()
     }
+    
+    
 }
+
 
 
 func createRoomyData() -> [RoomyData] {
