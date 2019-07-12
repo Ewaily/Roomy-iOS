@@ -10,8 +10,8 @@ import UIKit
 
 class RoomyDescription: UIViewController {
     
-    @IBOutlet weak var descriptionPic: UIImageView!
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet private weak var descriptionPic: UIImageView!
+    @IBOutlet private weak var descriptionLabel: UILabel!
     var desc: RoomyData?
     
     override func viewDidLoad() {
@@ -19,11 +19,6 @@ class RoomyDescription: UIViewController {
         self.navigationItem.setRightBarButton(UIBarButtonItem(image: #imageLiteral(resourceName: "Bookmark Button") ,style: .plain, target: self, action: #selector(bookmarkButton)), animated: true)
         descriptionPic.image = desc?.descriptionPic
         descriptionLabel.text = desc?.descriptionText
-    }
-    
-    func configureDescription (descriptionPic: UIImage, descriptionLabel: String){
-        self.descriptionPic.image = descriptionPic
-        self.descriptionLabel.text = descriptionLabel
     }
     
     @objc func bookmarkButton () {

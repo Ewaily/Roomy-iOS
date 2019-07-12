@@ -35,7 +35,7 @@ class RoomyData {
         self.descriptionPic = descriptionPic
     }
     
-    static func convertDoubleToCurrency (amount: Double) -> String {
+    static private func convertDoubleToCurrency (amount: Double) -> String {
         let numberFormatter = NumberFormatter ()
         numberFormatter.numberStyle = .currency
         numberFormatter.locale = Locale.current
