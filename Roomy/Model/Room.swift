@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class RoomyData {
+class Room {
     
     var address: String
     var city: String
@@ -25,7 +25,7 @@ class RoomyData {
     init(address: String, city: String, price: Double, bed: Int, bath: Int, firstPic: UIImage, secondPic: UIImage, thirdPic: UIImage, descriptionText: String, descriptionPic: UIImage) {
         self.address = address
         self.city = city
-        self.price = RoomyData.convertDoubleToCurrency(amount: price)
+        self.price = Room.convertDoubleToCurrency(amount: price)
         self.bed = bed
         self.bath = bath
         self.firstPic = firstPic

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SiginIn: UIViewController, UITextFieldDelegate {
+class SignIn: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()

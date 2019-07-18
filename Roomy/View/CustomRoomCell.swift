@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RoomyCell: UITableViewCell {
+class CustomRoomCell: UITableViewCell {
 
     @IBOutlet private weak var rommyContentView: UIView!
     @IBOutlet private weak var addressLabel: UILabel!
@@ -24,7 +24,7 @@ class RoomyCell: UITableViewCell {
         super.awakeFromNib()
     }
     
-    func configureCell (roomyData: RoomyData){
+    func configureCell (roomyData: Room){
         addressLabel.text = roomyData.address
         cityLabel.text = roomyData.city
         priceLabel.text = roomyData.price

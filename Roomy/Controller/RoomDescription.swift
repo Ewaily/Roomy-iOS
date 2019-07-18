@@ -8,11 +8,11 @@
 
 import UIKit
 
-class RoomyDescription: UIViewController {
+class RoomDescription: UIViewController {
     
     @IBOutlet private weak var descriptionPic: UIImageView!
     @IBOutlet private weak var descriptionLabel: UILabel!
-    var desc: RoomyData?
+    var desc: Room?
     
     override func viewDidLoad() {
         super.viewDidLoad()
