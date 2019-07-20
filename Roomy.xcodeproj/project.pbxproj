@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		100A931422D69AAB007E2E3F /* RoomDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100A931322D69AAB007E2E3F /* RoomDescription.swift */; };
 		10107DFB22D6C43B00F6A6C8 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10107DFA22D6C43B00F6A6C8 /* SignIn.swift */; };
+		103734BC22E2958B00845117 /* RoomsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103734BB22E2958B00845117 /* RoomsResponse.swift */; };
 		105EE6BB22D4A026009796D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105EE6BA22D4A026009796D8 /* AppDelegate.swift */; };
 		105EE6BD22D4A026009796D8 /* RoomsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105EE6BC22D4A026009796D8 /* RoomsTableView.swift */; };
 		105EE6C022D4A026009796D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 105EE6BE22D4A026009796D8 /* Main.storyboard */; };
@@ -19,11 +20,13 @@
 		10E3113522E0EB9400AFC70B /* Start.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E3113422E0EB9400AFC70B /* Start.swift */; };
 		10EA3FB022D653010088760A /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EA3FAF22D653010088760A /* Room.swift */; };
 		10FB109522E1DB4300C949B5 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FB109422E1DB4300C949B5 /* SignUp.swift */; };
+		73C64179C0732027B2DEB9A7 /* Pods_Roomy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8738014AF3F15D0791203CF1 /* Pods_Roomy.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		100A931322D69AAB007E2E3F /* RoomDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RoomDescription.swift; path = Roomy/Controller/RoomDescription.swift; sourceTree = SOURCE_ROOT; };
 		10107DFA22D6C43B00F6A6C8 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
+		103734BB22E2958B00845117 /* RoomsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsResponse.swift; sourceTree = "<group>"; };
 		105EE6B722D4A026009796D8 /* Roomy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roomy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		105EE6BA22D4A026009796D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		105EE6BC22D4A026009796D8 /* RoomsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsTableView.swift; sourceTree = "<group>"; };
@@ -36,6 +39,9 @@
 		10E3113422E0EB9400AFC70B /* Start.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Start.swift; sourceTree = "<group>"; };
 		10EA3FAF22D653010088760A /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		10FB109422E1DB4300C949B5 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		1B50F213B513A667FF9E65B3 /* Pods-Roomy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Roomy.debug.xcconfig"; path = "Target Support Files/Pods-Roomy/Pods-Roomy.debug.xcconfig"; sourceTree = "<group>"; };
+		6BBAF9CFB46595DEFB1B76DA /* Pods-Roomy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Roomy.release.xcconfig"; path = "Target Support Files/Pods-Roomy/Pods-Roomy.release.xcconfig"; sourceTree = "<group>"; };
+		8738014AF3F15D0791203CF1 /* Pods_Roomy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Roomy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73C64179C0732027B2DEB9A7 /* Pods_Roomy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +61,8 @@
 			children = (
 				105EE6B922D4A026009796D8 /* Roomy */,
 				105EE6B822D4A026009796D8 /* Products */,
+				3DDCDBDCE3FF01E4D2B27C7E /* Pods */,
+				B6EB404B7163DCD70305102F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				10EA3FAF22D653010088760A /* Room.swift */,
+				103734BB22E2958B00845117 /* RoomsResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -141,6 +151,23 @@
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
+		3DDCDBDCE3FF01E4D2B27C7E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1B50F213B513A667FF9E65B3 /* Pods-Roomy.debug.xcconfig */,
+				6BBAF9CFB46595DEFB1B76DA /* Pods-Roomy.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B6EB404B7163DCD70305102F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8738014AF3F15D0791203CF1 /* Pods_Roomy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -148,9 +175,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 105EE6C922D4A027009796D8 /* Build configuration list for PBXNativeTarget "Roomy" */;
 			buildPhases = (
+				5D3B39C3B78785187C983F41 /* [CP] Check Pods Manifest.lock */,
 				105EE6B322D4A026009796D8 /* Sources */,
 				105EE6B422D4A026009796D8 /* Frameworks */,
 				105EE6B522D4A026009796D8 /* Resources */,
+				0225EF502B59E877A8B49003 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -208,6 +237,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0225EF502B59E877A8B49003 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Roomy/Pods-Roomy-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Roomy/Pods-Roomy-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Roomy/Pods-Roomy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D3B39C3B78785187C983F41 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Roomy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		105EE6B322D4A026009796D8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -217,6 +288,7 @@
 				105EE6BB22D4A026009796D8 /* AppDelegate.swift in Sources */,
 				10E3113522E0EB9400AFC70B /* Start.swift in Sources */,
 				10EA3FB022D653010088760A /* Room.swift in Sources */,
+				103734BC22E2958B00845117 /* RoomsResponse.swift in Sources */,
 				1097123222D576AB001153E2 /* CustomRoomCell.swift in Sources */,
 				10FB109522E1DB4300C949B5 /* SignUp.swift in Sources */,
 				100A931422D69AAB007E2E3F /* RoomDescription.swift in Sources */,
@@ -364,6 +436,7 @@
 		};
 		105EE6CA22D4A027009796D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B50F213B513A667FF9E65B3 /* Pods-Roomy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -382,6 +455,7 @@
 		};
 		105EE6CB22D4A027009796D8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BBAF9CFB46595DEFB1B76DA /* Pods-Roomy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
