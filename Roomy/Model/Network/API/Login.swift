@@ -8,7 +8,6 @@
 
 import Alamofire
 import SwiftyJSON
-import UIKit
 
 class Login: NSObject {
     class func login(para: [String: String], completion: @escaping (_ error: Error?, _ success: Bool) -> Void) {
@@ -16,7 +15,6 @@ class Login: NSObject {
         AF.request(SigninEndpoint, method: HTTPMethod.post, parameters: para).validate().responseJSON { response in
             switch response.result {
             case .success(let value):
-                print("Validation Successful")
                 let json = JSON(value)
                 let auth_token = json["auth_token"].string
                 let def = UserDefaults.standard
@@ -24,7 +22,6 @@ class Login: NSObject {
                 completion(nil, true)
             case .failure(let error):
                 completion(error, false)
-                print(error)
             }
         }
     }

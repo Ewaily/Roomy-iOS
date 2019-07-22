@@ -23,8 +23,8 @@ class offlineRooms: Object {
     override static func primaryKey() -> String? {
         return "id"
     }
-
-     func addRoomsToRealm (room: Room){
+    
+    func addRoomsToRealm (room: Room){
         let realm = try! Realm()
         try! realm.write {
             let roomRealm = offlineRooms()
@@ -36,17 +36,13 @@ class offlineRooms: Object {
             roomRealm.bath = room.bath
             roomRealm.descriptionText = room.descriptionText
             roomRealm.descriptionPicLink = room.descriptionPicLink
-            
             realm.add(roomRealm, update: .modified)
-            
         }
     }
     
     func readAllRoomsFromRealm() -> Results <offlineRooms>{
         let realm = try! Realm()
         let rooms = realm.objects(offlineRooms.self)
-        
-        
         return rooms
     }
 }

@@ -6,11 +6,10 @@
 //  Copyright © 2019 Muhammad Ewaily. All rights reserved.
 //
 
-import Alamofire
-import SwiftyJSON
+import NVActivityIndicatorView
 import UIKit
 
-class SignIn: UIViewController, UITextFieldDelegate {
+class SignIn: UIViewController, UITextFieldDelegate, NVActivityIndicatorViewable {
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
@@ -24,26 +23,31 @@ class SignIn: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func signInButton(_ sender: UIButton) {
-        let email = emailTextField.text
-        let password = passwordTextField.text
-        
-        if email!.isEmpty || password!.isEmpty {
-            showAlert(message: "Complete the requird fields", title: "Empty fields")
-            return
-        }
-        
-        let signInParameters = ["email": email, "password": password] as! [String: String]
-        Login.login(para: signInParameters) { (error: Error?, success: Bool) in
-            if success {
-                self.performSegue(withIdentifier: "roomsSegue", sender: Any?.self)
+        if Connectivity.isConnectedToInternet() {
+            startAnimating()
+            let email = emailTextField.text
+            let password = passwordTextField.text
+            
+            if email!.isEmpty || password!.isEmpty {
+                stopAnimating()
+                showAlert(message: "Complete the requird fields", title: "Empty fields")
+                return
             }
-            else {
-                if !Connectivity.isConnectedToInternet(){
-                    self.showAlert(message: "No Internet Connection", title: "Connection Failed")
+            
+            let signInParameters = ["email": email, "password": password] as! [String: String]
+            Login.login(para: signInParameters) { (_: Error?, success: Bool) in
+                if success {
+                    self.performSegue(withIdentifier: "roomsSegue", sender: Any?.self)
                 }
-                self.showAlert(message: "Invalied email or password", title: "Wrong credentials!")
-                print(error)
+                else {
+                    self.stopAnimating()
+                    self.showAlert(message: "Invalied email or password", title: "Wrong credentials!")
+                }
             }
+        }
+        else {
+            stopAnimating()
+            showAlert(message: "No Internet Connection", title: "Connection Failed")
         }
     }
     
@@ -58,10 +62,4 @@ class SignIn: UIViewController, UITextFieldDelegate {
     @IBAction func signUpButton(_ sender: UIButton) {}
     
     @IBAction func forgetPasswordButton(_ sender: UIButton) {}
-    
-    func showAlert(message: String, title: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(alert, animated: true, completion: nil)
-    }
 }

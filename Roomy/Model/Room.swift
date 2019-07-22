@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 class Room: NSObject {
+    var id: Int = 0
     var address: String = ""
     var city: String = ""
     var price: String = ""
@@ -19,6 +20,6 @@ class Room: NSObject {
     var secondPic: UIImage = UIImage(named: "Placeholder")!
     var thirdPic: UIImage = UIImage(named: "Placeholder")!
     var descriptionText: String = ""
-    var descriptionPicLink: URL?
+    var descriptionPicLink: String = ""
     var descriptionPic: UIImageView = UIImageView()
 }

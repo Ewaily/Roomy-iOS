@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let def = UserDefaults.standard
-        if let auth_token = def.object(forKey: "auth_token") as? String {
+        if (def.object(forKey: "auth_token") as? String) != nil {
             let tab = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Rooms")
             window?.rootViewController = tab
         }

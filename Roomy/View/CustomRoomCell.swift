@@ -18,11 +18,11 @@ class CustomRoomCell: UITableViewCell {
     @IBOutlet private var firstPic: UIImageView!
     @IBOutlet private var secondPic: UIImageView!
     @IBOutlet private var thirdPic: UIImageView!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-    
+
     func configureCell(roomyData: Room) {
         addressLabel.text = roomyData.address
         cityLabel.text = roomyData.city

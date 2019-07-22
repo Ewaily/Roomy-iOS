@@ -6,10 +6,10 @@
 //  Copyright © 2019 Muhammad Ewaily. All rights reserved.
 //
 
-import Alamofire
+import NVActivityIndicatorView
 import UIKit
 
-class SignUp: UIViewController, UITextFieldDelegate {
+class SignUp: UIViewController, UITextFieldDelegate, NVActivityIndicatorViewable {
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
@@ -25,35 +25,36 @@ class SignUp: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func signUpButton(_ sender: UIButton) {
-        let name = nameTextField.text
-        let email = emailTextField.text
-        let password = passwordTextField.text
-        let confirmPassword = confirmPasswordTextField.text
-        
-        if name!.isEmpty || email!.isEmpty || password!.isEmpty || confirmPassword!.isEmpty {
-            showAlert(message: "Complete the requird fields", title: "Empty fields")
-            return
-        }
-        
-        if password != confirmPassword {
-            showAlert(message: "Passwords don't match", title: "Wrong password")
-            return
-        }
-        
-        let signUpParameters = ["name": name, "email": email, "password": password] as! [String: String]
-        Register.register(para: signUpParameters) { (error: Error?, success: Bool) in
-            if success {
-                self.performSegue(withIdentifier: "loginSegue", sender: Any?.self)
+        if Connectivity.isConnectedToInternet() {
+            startAnimating()
+            let name = nameTextField.text
+            let email = emailTextField.text
+            let password = passwordTextField.text
+            let confirmPassword = confirmPasswordTextField.text
+            
+            if name!.isEmpty || email!.isEmpty || password!.isEmpty || confirmPassword!.isEmpty {
+                stopAnimating()
+                showAlert(message: "Complete the requird fields", title: "Empty fields")
+                return
             }
-            else {
-                print(error)
+            
+            if password != confirmPassword {
+                stopAnimating()
+                showAlert(message: "Passwords don't match", title: "Wrong password")
+                return
+            }
+            
+            let signUpParameters = ["name": name, "email": email, "password": password] as! [String: String]
+            Register.register(para: signUpParameters) { (_: Error?, success: Bool) in
+                if success {
+                    self.performSegue(withIdentifier: "loginSegue", sender: Any?.self)
+                }
+                else {}
             }
         }
-    }
-    
-    func showAlert(message: String, title: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(alert, animated: true, completion: nil)
+        else {
+            stopAnimating()
+            showAlert(message: "No Internet Connection", title: "Connection Failed")
+        }
     }
 }

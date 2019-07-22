@@ -6,9 +6,10 @@
 //  Copyright © 2019 Muhammad Ewaily. All rights reserved.
 //
 
+import NVActivityIndicatorView
 import UIKit
 
-class RoomsTableView: UIViewController {
+class RoomsTableView: UIViewController, NVActivityIndicatorViewable {
     @IBOutlet var roomsTableView: UITableView!
     var Rooms: [Room] = []
     var currentIndex = 0
@@ -16,6 +17,7 @@ class RoomsTableView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        startAnimating()
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationItem.setRightBarButton(UIBarButtonItem(image: #imageLiteral(resourceName: "Signout"), style: .plain, target: self, action: #selector(loggingOut)), animated: true)
@@ -25,26 +27,37 @@ class RoomsTableView: UIViewController {
         handleRooms()
     }
     
-    @objc func signOutButton() {
-        print("out!")
-        UserDefaults.standard.removeObject(forKey: "auth_token")
-        let tab = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "start")
-        present(tab, animated: true)
-    }
-    
     lazy var refresher: UIRefreshControl = {
         let refresher = UIRefreshControl()
         refresher.addTarget(self, action: #selector(handleRooms), for: .valueChanged)
         return refresher
     }()
     
+    @objc func signOutButton() {
+        UserDefaults.standard.removeObject(forKey: "auth_token")
+        let tab = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "start")
+        present(tab, animated: true)
+    }
+    
     @objc private func handleRooms() {
         refresher.endRefreshing()
-        GetRooms.getRooms { (_: Error?, Rooms: [Room]?) in
-            if let Rooms = Rooms {
-                self.Rooms = Rooms
-                self.roomsTableView.reloadData()
+        if Connectivity.isConnectedToInternet() {
+            GetRooms.getRoomsFromBackend { (_: Error?, Rooms: [Room]?) in
+                if let Rooms = Rooms {
+                    self.Rooms = Rooms
+                    self.roomsTableView.reloadData()
+                }
             }
+            stopAnimating()
+        }
+        else {
+            GetRooms.getRoomsFromRealm { (_: Error?, Rooms: [Room]?) in
+                if let Rooms = Rooms {
+                    self.Rooms = Rooms
+                    self.roomsTableView.reloadData()
+                }
+            }
+            stopAnimating()
         }
     }
     
@@ -55,9 +68,7 @@ class RoomsTableView: UIViewController {
             _ in
             self.signOutButton()
         })
-        
         let mode2 = UIAlertAction(title: "No", style: .default, handler: nil)
-        
         alert.addAction(mode1)
         alert.addAction(mode2)
         
