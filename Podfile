@@ -7,7 +7,8 @@ target 'Roomy' do
 
   # Pods for Roomy
 	pod 'Alamofire', '~> 5.0.0-beta.5'
-	pod 'ObjectMapper', '~> 3.4'
-
-
+  pod 'NVActivityIndicatorView'
+  pod 'SwiftyJSON', '~> 4.0'
+  pod 'Kingfisher', '~> 5.0'
+  pod 'RealmSwift'
 end

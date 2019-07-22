@@ -9,22 +9,21 @@
 import UIKit
 
 class CustomRoomCell: UITableViewCell {
-
-    @IBOutlet private weak var rommyContentView: UIView!
-    @IBOutlet private weak var addressLabel: UILabel!
-    @IBOutlet private weak var cityLabel: UILabel!
-    @IBOutlet private weak var priceLabel: UILabel!
-    @IBOutlet private weak var bedLabel: UILabel!
-    @IBOutlet private weak var bathLabel: UILabel!
-    @IBOutlet private weak var firstPic: UIImageView!
-    @IBOutlet private weak var secondPic: UIImageView!
-    @IBOutlet private weak var thirdPic: UIImageView!
+    @IBOutlet private var rommyContentView: UIView!
+    @IBOutlet private var addressLabel: UILabel!
+    @IBOutlet private var cityLabel: UILabel!
+    @IBOutlet private var priceLabel: UILabel!
+    @IBOutlet private var bedLabel: UILabel!
+    @IBOutlet private var bathLabel: UILabel!
+    @IBOutlet private var firstPic: UIImageView!
+    @IBOutlet private var secondPic: UIImageView!
+    @IBOutlet private var thirdPic: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
-    func configureCell (roomyData: Room){
+    func configureCell(roomyData: Room) {
         addressLabel.text = roomyData.address
         cityLabel.text = roomyData.city
         priceLabel.text = roomyData.price

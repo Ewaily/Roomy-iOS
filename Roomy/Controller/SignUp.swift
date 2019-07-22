@@ -6,25 +6,25 @@
 //  Copyright © 2019 Muhammad Ewaily. All rights reserved.
 //
 
-import UIKit
 import Alamofire
+import UIKit
 
-class SignUp: UIViewController {
-
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var confirmPasswordTextField: UITextField!
-    
-    let SignupEndpoint = URL(string: "https://roomy-application.herokuapp.com/signup")!
+class SignUp: UIViewController, UITextFieldDelegate {
+    @IBOutlet var nameTextField: UITextField!
+    @IBOutlet var emailTextField: UITextField!
+    @IBOutlet var passwordTextField: UITextField!
+    @IBOutlet var confirmPasswordTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
     
     @IBAction func signUpButton(_ sender: UIButton) {
-        print("g")
         let name = nameTextField.text
         let email = emailTextField.text
         let password = passwordTextField.text
@@ -40,25 +40,20 @@ class SignUp: UIViewController {
             return
         }
         
-        let signUpParameters = ["name": name, "email": email, "password": password] as! [String : String]
-        connectToSignUpAPI(para: signUpParameters)
-    }
-    
-    func connectToSignUpAPI(para: [String:String]) {
-        AF.request(SignupEndpoint, method: HTTPMethod.post,parameters: para).validate().responseJSON { response in
-            switch response.result {
-            case .success:
-                print("Validation Successful")
+        let signUpParameters = ["name": name, "email": email, "password": password] as! [String: String]
+        Register.register(para: signUpParameters) { (error: Error?, success: Bool) in
+            if success {
                 self.performSegue(withIdentifier: "loginSegue", sender: Any?.self)
-            case .failure(let error):
+            }
+            else {
                 print(error)
             }
         }
     }
     
-    func showAlert(message: String, title: String ) {
+    func showAlert(message: String, title: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+        present(alert, animated: true, completion: nil)
     }
 }

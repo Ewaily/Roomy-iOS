@@ -1,20 +1,40 @@
 PODS:
   - Alamofire (5.0.0-beta.6)
-  - ObjectMapper (3.5.1)
+  - Kingfisher (5.7.0)
+  - NVActivityIndicatorView (4.7.0):
+    - NVActivityIndicatorView/Presenter (= 4.7.0)
+  - NVActivityIndicatorView/Presenter (4.7.0)
+  - Realm (3.17.1):
+    - Realm/Headers (= 3.17.1)
+  - Realm/Headers (3.17.1)
+  - RealmSwift (3.17.1):
+    - Realm (= 3.17.1)
+  - SwiftyJSON (4.3.0)
 
 DEPENDENCIES:
   - Alamofire (~> 5.0.0-beta.5)
-  - ObjectMapper (~> 3.4)
+  - Kingfisher (~> 5.0)
+  - NVActivityIndicatorView
+  - RealmSwift
+  - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
-    - ObjectMapper
+    - Kingfisher
+    - NVActivityIndicatorView
+    - Realm
+    - RealmSwift
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: cd08a4402bd12cacd0c66f23fb12fec8d6b965e4
-  ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
+  Kingfisher: c7d211b54f1f30d8060aadab177d52b4349c825b
+  NVActivityIndicatorView: b19ddab2576f805cbe0fb2306cba3476e09a1dea
+  Realm: c204f1a890f07dea43b14132a6aad118c054b8f2
+  RealmSwift: 4d3c9233544b9cd08a8913e0872b9038eb99b054
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: ff59a3cb73d00fe8a4865ab85a89c44c89a5c3c4
+PODFILE CHECKSUM: 083e3b6279083880439d127efc971b12e5ee4a94
 
 COCOAPODS: 1.7.3

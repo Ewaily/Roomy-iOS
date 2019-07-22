@@ -6,20 +6,16 @@
 //  Copyright © 2019 Muhammad Ewaily. All rights reserved.
 //
 
-import UIKit
 import Alamofire
+import SwiftyJSON
+import UIKit
 
 class SignIn: UIViewController, UITextFieldDelegate {
-
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    
-    let SigninEndpoint = URL(string: "https://roomy-application.herokuapp.com/auth/login")!
-
+    @IBOutlet var emailTextField: UITextField!
+    @IBOutlet var passwordTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -36,45 +32,36 @@ class SignIn: UIViewController, UITextFieldDelegate {
             return
         }
         
-        let signInParameters = ["email": email, "password": password]  as! [String : String]
-        connectToSignInAPI(para: signInParameters)
-    }
-    
-    
-    @IBAction func signInWithLinkedIn(_ sender: UIButton) {
-    }
-    
-    @IBAction func signInWithTwitter(_ sender: UIButton) {
-    }
-    
-    @IBAction func signInWithFacebook(_ sender: UIButton) {
-    }
-    
-    @IBAction func signInWithGoogle(_ sender: UIButton) {
-    }
-    
-    @IBAction func signUpButton(_ sender: UIButton) {
-
-    }
-    
-    @IBAction func forgetPasswordButton(_ sender: UIButton) {
-    }
-    
-    func showAlert(message: String, title: String ) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
-    }
-    
-    func connectToSignInAPI(para: [String:String]) {
-        AF.request(SigninEndpoint, method: HTTPMethod.post,parameters: para).validate().responseJSON { response in
-            switch response.result {
-            case .success:
-                print("Validation Successful")
+        let signInParameters = ["email": email, "password": password] as! [String: String]
+        Login.login(para: signInParameters) { (error: Error?, success: Bool) in
+            if success {
                 self.performSegue(withIdentifier: "roomsSegue", sender: Any?.self)
-            case .failure(let error):
+            }
+            else {
+                if !Connectivity.isConnectedToInternet(){
+                    self.showAlert(message: "No Internet Connection", title: "Connection Failed")
+                }
+                self.showAlert(message: "Invalied email or password", title: "Wrong credentials!")
                 print(error)
             }
         }
+    }
+    
+    @IBAction func signInWithLinkedIn(_ sender: UIButton) {}
+    
+    @IBAction func signInWithTwitter(_ sender: UIButton) {}
+    
+    @IBAction func signInWithFacebook(_ sender: UIButton) {}
+    
+    @IBAction func signInWithGoogle(_ sender: UIButton) {}
+    
+    @IBAction func signUpButton(_ sender: UIButton) {}
+    
+    @IBAction func forgetPasswordButton(_ sender: UIButton) {}
+    
+    func showAlert(message: String, title: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
 }

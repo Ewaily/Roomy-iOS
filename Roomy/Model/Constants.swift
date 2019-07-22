@@ -7,3 +7,13 @@
 //
 
 import Foundation
+
+struct URLs {
+    static let main = "https://roomy-application.herokuapp.com/"
+    
+    static let login = main + "auth/login"
+    
+    static let register = main + "signup"
+    
+    static let rooms = main + "rooms"
+}
