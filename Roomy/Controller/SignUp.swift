@@ -10,10 +10,10 @@ import NVActivityIndicatorView
 import UIKit
 
 class SignUp: UIViewController, UITextFieldDelegate, NVActivityIndicatorViewable {
-    @IBOutlet var nameTextField: UITextField!
-    @IBOutlet var emailTextField: UITextField!
-    @IBOutlet var passwordTextField: UITextField!
-    @IBOutlet var confirmPasswordTextField: UITextField!
+    @IBOutlet private var nameTextField: UITextField!
+    @IBOutlet private var emailTextField: UITextField!
+    @IBOutlet private var passwordTextField: UITextField!
+    @IBOutlet private var confirmPasswordTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +24,7 @@ class SignUp: UIViewController, UITextFieldDelegate, NVActivityIndicatorViewable
         return true
     }
     
-    @IBAction func signUpButton(_ sender: UIButton) {
+    @IBAction private func signUpButton(_ sender: UIButton) {
         if Connectivity.isConnectedToInternet() {
             startAnimating()
             let name = nameTextField.text

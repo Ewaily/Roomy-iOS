@@ -10,8 +10,8 @@ import NVActivityIndicatorView
 import UIKit
 
 class SignIn: UIViewController, UITextFieldDelegate, NVActivityIndicatorViewable {
-    @IBOutlet var emailTextField: UITextField!
-    @IBOutlet var passwordTextField: UITextField!
+    @IBOutlet private var emailTextField: UITextField!
+    @IBOutlet private var passwordTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +24,7 @@ class SignIn: UIViewController, UITextFieldDelegate, NVActivityIndicatorViewable
         return true
     }
     
-    @IBAction func signInButton(_ sender: UIButton) {
+    @IBAction private func signInButton(_ sender: UIButton) {
         if Connectivity.isConnectedToInternet() {
             startAnimating()
             let email = emailTextField.text
@@ -53,17 +53,17 @@ class SignIn: UIViewController, UITextFieldDelegate, NVActivityIndicatorViewable
         }
     }
     
-    @IBAction func signInWithLinkedIn(_ sender: UIButton) {}
+    @IBAction private func signInWithLinkedIn(_ sender: UIButton) {}
     
-    @IBAction func signInWithTwitter(_ sender: UIButton) {}
+    @IBAction private func signInWithTwitter(_ sender: UIButton) {}
     
-    @IBAction func signInWithFacebook(_ sender: UIButton) {
+    @IBAction private func signInWithFacebook(_ sender: UIButton) {
         performSegue(withIdentifier: "FBSegue", sender: self)
     }
     
-    @IBAction func signInWithGoogle(_ sender: UIButton) {}
+    @IBAction private func signInWithGoogle(_ sender: UIButton) {}
     
-    @IBAction func signUpButton(_ sender: UIButton) {}
+    @IBAction private func signUpButton(_ sender: UIButton) {}
     
-    @IBAction func forgetPasswordButton(_ sender: UIButton) {}
+    @IBAction private func forgetPasswordButton(_ sender: UIButton) {}
 }

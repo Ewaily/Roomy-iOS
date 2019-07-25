@@ -24,7 +24,7 @@ class RoomDescription: UIViewController {
         descriptionLabel.text = desc?.descriptionText
     }
 
-    @objc func bookmarkButton() {
+    @objc private func bookmarkButton() {
         print("Bookmarked!")
     }
 }

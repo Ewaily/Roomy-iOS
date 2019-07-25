@@ -10,7 +10,7 @@ import NVActivityIndicatorView
 import UIKit
 
 class RoomsTableView: UIViewController, NVActivityIndicatorViewable {
-    @IBOutlet var roomsTableView: UITableView!
+    @IBOutlet private var roomsTableView: UITableView!
     var Rooms: [Room] = []
     var currentIndex = 0
     var window: UIWindow?
@@ -27,13 +27,13 @@ class RoomsTableView: UIViewController, NVActivityIndicatorViewable {
         handleRooms()
     }
     
-    lazy var refresher: UIRefreshControl = {
+    lazy private var refresher: UIRefreshControl = {
         let refresher = UIRefreshControl()
         refresher.addTarget(self, action: #selector(handleRooms), for: .valueChanged)
         return refresher
     }()
     
-    @objc func signOutButton() {
+    @objc private func signOutButton() {
         UserDefaults.standard.removeObject(forKey: "auth_token")
         let tab = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "start")
         present(tab, animated: true)
@@ -61,7 +61,7 @@ class RoomsTableView: UIViewController, NVActivityIndicatorViewable {
         }
     }
     
-    @objc func loggingOut() {
+    @objc private func loggingOut() {
         let alert = UIAlertController(title: "Log Out", message: "Are you sure you want to logout?", preferredStyle: .alert)
         
         let mode1 = UIAlertAction(title: "Yes", style: .default, handler: {
