@@ -15,6 +15,8 @@ class SignIn: UIViewController, UITextFieldDelegate, NVActivityIndicatorViewable
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -55,7 +57,9 @@ class SignIn: UIViewController, UITextFieldDelegate, NVActivityIndicatorViewable
     
     @IBAction func signInWithTwitter(_ sender: UIButton) {}
     
-    @IBAction func signInWithFacebook(_ sender: UIButton) {}
+    @IBAction func signInWithFacebook(_ sender: UIButton) {
+        performSegue(withIdentifier: "FBSegue", sender: self)
+    }
     
     @IBAction func signInWithGoogle(_ sender: UIButton) {}
     

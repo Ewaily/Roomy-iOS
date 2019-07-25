@@ -11,4 +11,7 @@ target 'Roomy' do
   pod 'SwiftyJSON', '~> 4.0'
   pod 'Kingfisher', '~> 5.0'
   pod 'RealmSwift'
+  pod 'FBSDKCoreKit'
+  pod 'FBSDKLoginKit'
+  pod 'FBSDKShareKit'
 end

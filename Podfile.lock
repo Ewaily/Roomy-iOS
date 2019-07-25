@@ -1,5 +1,15 @@
 PODS:
   - Alamofire (5.0.0-beta.6)
+  - FBSDKCoreKit (5.2.1):
+    - FBSDKCoreKit/Basics (= 5.2.1)
+    - FBSDKCoreKit/Core (= 5.2.1)
+  - FBSDKCoreKit/Basics (5.2.1)
+  - FBSDKCoreKit/Core (5.2.1):
+    - FBSDKCoreKit/Basics
+  - FBSDKLoginKit (5.2.1):
+    - FBSDKCoreKit (~> 5.0)
+  - FBSDKShareKit (5.2.1):
+    - FBSDKCoreKit (~> 5.0)
   - Kingfisher (5.7.0)
   - NVActivityIndicatorView (4.7.0):
     - NVActivityIndicatorView/Presenter (= 4.7.0)
@@ -13,6 +23,9 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 5.0.0-beta.5)
+  - FBSDKCoreKit
+  - FBSDKLoginKit
+  - FBSDKShareKit
   - Kingfisher (~> 5.0)
   - NVActivityIndicatorView
   - RealmSwift
@@ -21,6 +34,9 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - FBSDKCoreKit
+    - FBSDKLoginKit
+    - FBSDKShareKit
     - Kingfisher
     - NVActivityIndicatorView
     - Realm
@@ -29,12 +45,15 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: cd08a4402bd12cacd0c66f23fb12fec8d6b965e4
+  FBSDKCoreKit: e1ab8d86f5eea2d7aa6ab12acca3e1d2dcb11983
+  FBSDKLoginKit: 6e20e44775ddf4b159a8ca676834325e13d12221
+  FBSDKShareKit: 75a25e88b15b66e67ed03826080eff825afff520
   Kingfisher: c7d211b54f1f30d8060aadab177d52b4349c825b
   NVActivityIndicatorView: b19ddab2576f805cbe0fb2306cba3476e09a1dea
   Realm: c204f1a890f07dea43b14132a6aad118c054b8f2
   RealmSwift: 4d3c9233544b9cd08a8913e0872b9038eb99b054
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: 083e3b6279083880439d127efc971b12e5ee4a94
+PODFILE CHECKSUM: 8a93f99eb62ebdcea900e93bc9819825a637ceff
 
 COCOAPODS: 1.7.3

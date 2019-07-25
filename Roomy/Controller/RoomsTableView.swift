@@ -20,7 +20,7 @@ class RoomsTableView: UIViewController, NVActivityIndicatorViewable {
         startAnimating()
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
-        navigationItem.setRightBarButton(UIBarButtonItem(image: #imageLiteral(resourceName: "Signout"), style: .plain, target: self, action: #selector(loggingOut)), animated: true)
+        navigationItem.setRightBarButton(UIBarButtonItem(title: "Log Out", style: .plain, target: self, action: #selector(loggingOut)), animated: true)
         roomsTableView.addSubview(refresher)
         let myXibFile = UINib(nibName: "RoomyCell", bundle: nil)
         roomsTableView.register(myXibFile, forCellReuseIdentifier: "roomyCell")
